@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayur Motinge - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/fevcn.png">
+
+
+</head>
+<body>
+
+    <!---HEADER--->
+    <header class="navbar">
+        <img class="logo" src="images/logo.png" alt="">
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#footer">ABOUT</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle">&#9776</button>
+    </header>
+
+    <!---HERO SECTION--->
+    <section id="home" class="home">
+        <div class="info">
+            <div>
+                <h1>Where <br>MEMORY Meets the LENS</h1>
+                <p>Time is a thief; we are the keepers. <br>Photography to remember, Film to relive, and Writing to understand. This is the art of holding on to what matters.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!---INSTAGRAM SECTION--->
+    <section class="instagram-section" id="work">
+
+        <h2>MY WORK</h2>
+       
+        <div class="section-wrapper">
+        <h3 class="section-title">Photography</h3>
+        <div class="instagram-scroll" id="photoContainer"></div>
+        </div>
+
+        <div class="section-wrapper">
+        <h3 class="section-title">Writings</h3>
+        <div class="instagram-scroll" id="writingContainer"></div>
+        </div>
+
+        <script src="data/insta_posts.js"></script>
+        <script>
+        // Helper function to render cards (avoids repeating code)
+        function renderPosts(dataArray, containerId) {
+            const container = document.getElementById(containerId);
+            
+            dataArray.forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                // Add a pointer cursor so users know it's clickable
+                card.style.cursor = 'pointer';
+
+                const shortCap = post.cap.length > 80 ? post.cap.substring(0, 80) + '...' : post.cap;
+
+                card.innerHTML = `
+                    <img src="${post.img}" alt="Instagram Post">
+                    <div class="caption">${shortCap}</div>
+                `;
+
+                // ATTACH THE CLICK EVENT
+                card.addEventListener('click', () => {
+                    handleCardClick(post.url);
+                });
+
+                container.prepend(card);
+            });
+        }
+
+        // Function to handle opening the URL
+        function handleCardClick(url) {
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            }
+        }
+
+        // Run the functions
+        renderPosts(photoData, 'photoContainer');
+        renderPosts(writingData, 'writingContainer');
+        </script>
+    </section>
+
+
+
+
+<!---FOOTER--->
+    <section id="footer" class="footer">
+        <h2>ABOUT</h2>
+        <p>
+            I have always believed that time is a thief, but through a lens and a pen, I have become a keeper.
+        <br><br>To me, photography is the art of pausing the world; it is a silent story captured in a single, unrepeatable frame. But where the image ends, the word begins. While the lens captures the light, the pen explores the depth—the weight of a written thought and the understanding that comes through reflection.
+        <br><br>My work is about more than just documentation; it is about archiving the feelings we often forget to keep. Whether through the grain of a photograph or the rhythm of a sentence, I am dedicated to holding on to what matters before it slips away into the quiet of the past.
+        <br>______
+        </p>
+        <div>
+        <ul class="social">
+            <li id="instaBtn"><a href="javascript:void(0)"><img src="images/insta-icon.png" alt=""></a></li>
+            <li><a href="https://x.com/mayurmotinge"><img src="images/x-icon.png" alt=""></a></li>
+        </ul>
+        <ul class="contact">
+            <li><img src="images/email-icon.png" alt=""><a href="mailto:motingemayur@gmail.com">motingemayur@gmail.com</a></li>
+        </ul>
+        </div>
+
+        
+    </section>
+
+    <!---INSTAGRAM MODAL--->
+    <div id="instaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-links">
+                <p>I have two Instagram accounts. Which one would you like to visit?</p>
+                <a href="https://instagram.com/mayur_m_photography" target="_blank" class="insta-link">@mayur_m_photography</a>
+                <a href="https://instagram.com/mayur_m_writings" target="_blank" class="insta-link">@mayur_m_writings</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const openIcon  = '&#9776;';
+        const closeIcon = '&#10006;';
+
+        document.getElementById('menuToggle').addEventListener('click', function(){
+            document.getElementById('menu').classList.toggle('active'); 
+
+            if ( menu.classList.contains('active') ) {
+                this.innerHTML = closeIcon;
+                this.setAttribute('aria-label', 'Close menu');
+            } else {
+                this.innerHTML = openIcon;
+                this.setAttribute('aria-label', 'Open menu');
+            }
+        })
+
+        const modal = document.getElementById("instaModal");
+        const btn = document.getElementById("instaBtn");
+        const span = document.querySelector(".close-btn");
+
+        // Open modal on click
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal when 'X' is clicked
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal if user clicks anywhere outside of the box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
