@@ -211,12 +211,12 @@ padding: 0 40px;
     color: white;
     margin: 15% auto;
     padding: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
     border: 1px solid #e9bc93;
     text-align: center;
     border-radius: 10px;
     position: relative;
+    display: block;
+    width: auto;
 }
 
 /* Close Button */
@@ -295,17 +295,13 @@ padding: 0 40px;
     .section-wrapper {
         padding: 0 20px;
     }
-    /* The actual box */
-.modal-content {
-    margin-left: 10%;
-    margin-right: 10%;
-}
 
 
-/* Link Buttons */
-.modal-links a {
-    font-size: 20px;
-}
+
+    /* Link Buttons */
+    .modal-links a {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px){
