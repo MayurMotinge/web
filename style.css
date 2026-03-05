@@ -28,7 +28,7 @@ body{
     background-color: #181818;
 }
 section{
-    border-bottom: 0.1px solid #e9bc93;
+    border-bottom: 0.1px solid #3ecaca;
 }
 .navbar{
     position: fixed;
@@ -55,7 +55,7 @@ section{
     font-weight: bold;
 }
 .menu ul li a:hover{
-    color: #e9bc93;
+    color: #3ecaca;
 }
 .menu-toggle{
     display: none;
@@ -71,7 +71,7 @@ section{
     padding-top: 30vh;
     padding-left: 15%;
     padding-right: 45%;
-    background: linear-gradient(45deg,rgba(0,0,0,0.7), rgba(0,0,0,0)), url(images/background3.jpg);
+    background: linear-gradient(45deg,rgba(0,0,0,0.7), rgba(0,0,0,0)), url(images/background33.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -87,7 +87,7 @@ section{
     font-size: 18px;
     border-top: solid white 1px;
     padding-top: 5px;
-    color: #e9bc93;
+    color: #3ecaca;
 }
 
 /* Instagram Section */
@@ -122,7 +122,7 @@ padding: 0 40px;
 .card {
     flex: 0 0 300px; /* Fixed width for each card */
     scroll-snap-align: start;
-    border: 1px solid #e9bc93;
+    border: 1px solid #3ecaca;
     border-radius: 8px;
     overflow: hidden;
     background: #e9bd9322;
@@ -184,7 +184,7 @@ padding: 0 40px;
 }
 .contact a{
     text-decoration: none;
-    color: #e9bc93;
+    color: #3ecaca;
 }
 .contact img{
     height: 30px;
@@ -211,7 +211,7 @@ padding: 0 40px;
     color: white;
     margin: 15% auto;
     padding: 30px;
-    border: 1px solid #e9bc93;
+    border: 1px solid #3ecaca;
     text-align: center;
     border-radius: 10px;
     position: relative;
@@ -240,7 +240,7 @@ padding: 0 40px;
 }
 
 .modal-links a:hover {
-    color: #e9bc93;
+    color: #3ecaca;
 }
 
 
@@ -280,7 +280,7 @@ padding: 0 40px;
         padding-top: 55vh;
         padding-left: 15%;
         padding-right: 15%;
-        background: linear-gradient(45deg,rgba(0,0,0,0.7), rgba(0,0,0,0)), url(images/background2.jpg);
+        background: linear-gradient(45deg,rgba(0,0,0,0.7), rgba(0,0,0,0)), url(images/background22.jpg);
         background-size: cover;
         background-position: center;
     }
