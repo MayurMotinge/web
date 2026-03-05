@@ -29,8 +29,12 @@
                 img: "images/instaposts/mayur_m_photography/post6.jpg", 
                 cap: "Greenery, Evening, and Calm...", 
                 url: "https://www.instagram.com/mayur_m_photography/p/DNyLaOJ5pc6/"
+            },
+            { 
+                img: "images/instaposts/mayur_m_photography/post7.jpg", 
+                cap: "A soft blush rose blooming quietly among thorns, nurtured by silent resilience — a gentle reminder that even in the midst of sharp edges and silent struggles, beauty unfolds with grace and patience.", 
+                url: "https://www.instagram.com/p/DVYcGEIE8X1/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
             }
-
 
 
 
@@ -67,6 +71,16 @@
                 img: "images/instaposts/mayur_m_writings/post6.jpg", 
                 cap: "Dhurandhar is more than just a movie; it is a powerful reminder of the sacrifices made for our freedom. Some stories stay with you long after the lights come on, and this experience was truly unforgettable.", 
                 url: "https://www.instagram.com/mayur_m_writings/p/DSzj7WZiL_b/"
+            },
+            { 
+                img: "images/instaposts/mayur_m_writings/post7.jpg", 
+                cap: "We often feel stuck because we focus on what we can’t do rather than what we can. This mindset makes our personal limits feel like a wall instead of just a boundary.This focuses on the physical action in the photo. It acknowledges the \"weakness\" (the dark tunnel) but emphasizes the \"capacity\" to move toward the light. It turns the \"hard edge\" into a destination rather than a cage.", 
+                url: "https://www.instagram.com/p/DUAFK3LieM2/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+            },
+            { 
+                img: "images/instaposts/mayur_m_writings/post8.jpg", 
+                cap: "The fire of Dharma is eternal. It purifies the soul and destroys the ego. Let the light of righteousness guide your way through the darkness.Happy Holi!!", 
+                url: "https://www.instagram.com/p/DVYpDNTkiKS/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
             }
 
 
