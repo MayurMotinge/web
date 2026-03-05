@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-
+<p style="color: white;">This page has been viewed <span id="visit-count">0</span> times.</p>
     <script>
 
         const openIcon  = '&#9776;';
@@ -166,6 +166,16 @@
                 modal.style.display = "none";
             }
         }
+
+
+        function cb(response) {
+            document.getElementById('visit-count').innerText = response.value;
+        }
+
+        // This script increments the count and returns the new value
+        const script = document.createElement('script');
+        script.src = 'https://api.countapi.xyz/hit/your-domain.com/visits?callback=cb';
+        document.body.appendChild(script);
     </script>
 
 
