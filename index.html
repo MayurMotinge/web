@@ -170,23 +170,35 @@
         }
 
 
-        const namespace = "my-unique-github-project"; 
+        const namespace = "your-unique-site-name"; // Change this!
         const key = "home-page";
 
-        async function updateCounter() {
+        async function getVisits() {
+            const visited = localStorage.getItem('hasVisited');
+            const countElement = document.getElementById('visit-count');
+
             try {
-                const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
-                const data = await response.json();
-                
-                // The API returns an object like { "count": 123 }
-                document.getElementById('visit-count').innerText = data.count;
+                if (!visited) {
+                    // 1. FIRST TIME VISIT: Use the "/up" endpoint to increment
+                    const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
+                    const data = await response.json();
+                    countElement.innerText = data.count;
+                    
+                    // 2. Mark as visited so next time we don't increment
+                    localStorage.setItem('hasVisited', 'true');
+                } else {
+                    // 3. RETURNING VISIT: Use the base endpoint to just FETCH the current number
+                    const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`);
+                    const data = await response.json();
+                    countElement.innerText = data.count;
+                }
             } catch (error) {
-                console.error("Counter failed:", error);
-                document.getElementById('visit-count').innerText = "Unavailable";
+                console.error("Counter Error:", error);
+                countElement.innerText = "Error";
             }
         }
 
-        updateCounter();
+        getVisits();
     </script>
 
 
